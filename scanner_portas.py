@@ -24,7 +24,7 @@ def scan_port(ipaddress, port):
         sock.connect((ipaddress,port))
         
         print('[+] Port '+str(port)+' is Open')
-    except:
+    except OSError:
         pass
 
 targets=input('enter the targets and split by , = ')
